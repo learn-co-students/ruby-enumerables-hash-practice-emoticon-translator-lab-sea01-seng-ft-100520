@@ -25,7 +25,7 @@ end
    emote_hash = load_library(file_path)
    emote_hash.each do |k, v|
      if emote_hash[k][:japanese] == emoticon
-       return emote_hash.key(v)
+       return k
      end
    end
    return "Sorry, that emoticon was not found"
