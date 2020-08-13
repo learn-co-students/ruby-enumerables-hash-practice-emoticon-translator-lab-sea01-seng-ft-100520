@@ -2,10 +2,10 @@ require "yaml"
 
 def load_library(file_path)
   new_hash = {}
-  YAML.load_file(file_path).each do |emote_key, emote_array|
-    new_hash[emote_key] = {
-      :english => emote_array[0],
-      :japanese => emote_array[1]
+  YAML.load_file(file_path).each do |k, v|
+    new_hash[k] = {
+      :english => v[0],
+      :japanese => v[1]
     }
   end
   new_hash
